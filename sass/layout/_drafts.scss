@@ -1,0 +1,26 @@
+.drafts {
+  display: flex;
+}
+.drafts__piece {
+  & + & {
+    margin-left: 30px;
+  }
+}
+.drafts__thumb {
+  position: relative;
+}
+.drafts__title {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  padding: 27px;
+  width: 100%;
+
+  font-weight: 500;
+
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
+}

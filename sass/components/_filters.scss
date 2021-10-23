@@ -1,0 +1,9 @@
+/* FILTERS */
+.filter-buttons {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  &__btn + &__btn {
+    margin-left: 8px;
+  }
+}

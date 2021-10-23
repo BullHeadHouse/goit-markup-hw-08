@@ -1,0 +1,32 @@
+body {
+  background-color: var(--white-color);
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+.navpages__link,
+.contacts__link,
+.btn__first,
+.btn__second,
+.social-links__link,
+.clients__social,
+.grid-project,
+.grid-project__thumbtitle,
+.address__street,
+.address__link,
+.socials__link,
+.mailing-group__input,
+.backdrop,
+.close-btn,
+.modal__input,
+.modal__comment,
+.modal__btn {
+  transition-property: color, background-color, box-shadow, transform, opacity,
+    border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

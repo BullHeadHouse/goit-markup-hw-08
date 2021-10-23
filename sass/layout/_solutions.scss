@@ -1,0 +1,39 @@
+.section--property {
+  padding-bottom: 0;
+}
+.solutions {
+  display: flex;
+}
+.solutions__piece {
+  width: 270px;
+  & + & {
+    margin-left: 30px;
+  }
+}
+.solutions__placeicon {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  $icons: 'station', 'clock', 'diagram', 'astronaut';
+  @each $iconName in $icons {
+    &--#{$iconName} {
+      background-image: url('../images/#{$iconName}.svg');
+    }
+  }
+}
+.solutions__title {
+  margin-bottom: 10px;
+
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  font-size: inherit;
+}
+.solutions__text {
+  color: var(--secondary-text-color);
+  line-height: 1.71;
+}
