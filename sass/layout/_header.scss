@@ -6,9 +6,9 @@
     display: flex;
   }
 }
-
 .header-logo {
   @extend %logo;
+  padding: 15px 0;
   &--studio-color {
     color: var(--black-color);
   }

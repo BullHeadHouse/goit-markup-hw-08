@@ -17,8 +17,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
+    <link rel="stylesheet" href="./css/f_main.min.css" />
   </head>
 
   <body>
@@ -30,7 +30,7 @@
             >Web<span class="header-logo--studio-color">Studio</span></a
           >
 
-          <ul class="navpages">
+          <!-- <ul class="navpages">
             <li class="navpages__page">
               <a
                 class="navpages__link navpages__link--current"
@@ -44,10 +44,10 @@
             <li class="navpages__page">
               <a class="navpages__link" href="">Контакты</a>
             </li>
-          </ul>
+          </ul> -->
         </nav>
 
-        <ul class="contacts">
+        <!-- <ul class="contacts">
           <li class="contacts__page">
             <a class="contacts__link" href="mailto:info@devstudio.com"
               ><svg class="contacts__icon" width="16" height="12">
@@ -62,7 +62,7 @@
               >+38 096 111 11 11</a
             >
           </li>
-        </ul>
+        </ul> -->
       </div>
     </header>
 
@@ -130,7 +130,7 @@
       </section>
 
       <!-- WORK PROCESS -->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section__heading">Чем мы занимаемся</h2>
           <ul class="drafts">
@@ -166,7 +166,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- TEAM -->
       <section class="section section--b-color">
@@ -174,11 +174,32 @@
           <h2 class="section__heading">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__card">
-              <img
-                src="./images/img(2).webp"
-                alt="Фото Ігора Дем'яненка"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset=""
+                  type="image/webp"
+                />
+                <source media="(min-width: 1200px)" srcset="" type="" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset=""
+                  type="image/webp"
+                />
+                <source media="(min-width: 768px)" srcset="" type="" />
+                <source
+                  media="(min-width: 480px)"
+                  srcset=""
+                  type="image/webp"
+                />
+                <source media="(min-width: 480px)" srcset="" type="" />
+                <img
+                  src="./images/img(2).webp"
+                  alt="Фото Ігора Дем'яненка"
+                  width="270"
+                />
+              </picture>
+
               <div class="team-list__mempost">
                 <h3 class="team-list__member">Игорь Демьяненко</h3>
                 <p class="team-list__post">Product Designer</p>

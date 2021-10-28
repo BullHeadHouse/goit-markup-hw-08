@@ -5,25 +5,25 @@
 // UTILS
 
 // BASE
-@import './base/reset';
-@import './base/common';
+@import './base/f-reset';
+@import './base/f-common';
 // BASE
 
 // COMPONENTS
 // @import './components/backdrop';
 // @import './components/modal';
-@import './components/container';
-// @import './components/btn';
+@import './components/f-container';
+@import './components/btn';
 // @import './components/filters';
-// @import './components/section';
+@import './components/f-section';
 // COMPONENTS
 
 // LAYOUT
-@import './layout/header';
-@import './layout/hero';
-@import './layout/solutions';
+@import './layout/f-header';
+@import './layout/f-hero';
+@import './layout/f-solutions';
 // @import './layout/drafts';
-// @import './layout/team';
+@import './layout/f-team';
 // @import './layout/clients';
 // @import './layout/projects';
 // @import './layout/footer';
