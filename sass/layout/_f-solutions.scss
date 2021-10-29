@@ -4,7 +4,6 @@ section {
   }
   .solutions {
     //   display: flex;
-    margin-bottom: 60px;
   }
   .solutions__piece {
     width: 100%;
@@ -28,7 +27,7 @@ section {
     $icons: 'station', 'clock', 'diagram', 'astronaut';
     @each $iconName in $icons {
       &--#{$iconName} {
-        background-image: url('../images/#{$iconName}.svg');
+        background-image: url('../../images/icons/#{$iconName}.svg');
       }
     }
   }

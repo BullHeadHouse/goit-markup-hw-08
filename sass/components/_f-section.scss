@@ -10,10 +10,16 @@
   }
 }
 .section__heading {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: var(--weight-bold);
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
 }
