@@ -17,7 +17,7 @@
         "../sass/layout/_f-drafts.scss",
         "../sass/layout/_f-team.scss",
         "../sass/layout/_f-clients.scss",
-        "../sass/layout/f-projects.scss",
+        "../sass/layout/_f-projects.scss",
         "../sass/layout/_f-footer.scss"
     ],
     "names": [],
