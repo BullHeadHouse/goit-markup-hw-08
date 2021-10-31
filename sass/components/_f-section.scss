@@ -23,3 +23,8 @@
     font-size: 36px;
   }
 }
+.section--property {
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
+}
