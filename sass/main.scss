@@ -1,6 +1,6 @@
 // UTILS
 @import './utils/variables';
-// @import './utils/mixins';
+@import './utils/mixins';
 @import './utils/placeholders';
 // UTILS
 
@@ -10,21 +10,21 @@
 // BASE
 
 // COMPONENTS
-// @import './components/backdrop';
-// @import './components/modal';
+@import './components/backdrop';
+@import './components/modal';
 @import './components/container';
-// @import './components/btn';
-// @import './components/filters';
-// @import './components/section';
+@import './components/btn';
+@import './components/filters';
+@import './components/section';
 // COMPONENTS
 
 // LAYOUT
 @import './layout/header';
 @import './layout/hero';
 @import './layout/solutions';
-// @import './layout/drafts';
-// @import './layout/team';
-// @import './layout/clients';
-// @import './layout/projects';
-// @import './layout/footer';
+@import './layout/drafts';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/projects';
+@import './layout/footer';
 // LAYOUT

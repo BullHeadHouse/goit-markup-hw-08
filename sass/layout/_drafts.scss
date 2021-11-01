@@ -1,15 +1,20 @@
 .drafts {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+.drafts-list {
   display: flex;
 }
-.drafts__piece {
+.drafts-list__piece {
   & + & {
     margin-left: 30px;
   }
 }
-.drafts__thumb {
+.drafts-list__thumb {
   position: relative;
 }
-.drafts__title {
+.drafts-list__title {
   position: absolute;
   display: flex;
   bottom: 0;

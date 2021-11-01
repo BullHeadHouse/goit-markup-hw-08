@@ -1,9 +1,13 @@
 .header {
   border-bottom: 1px solid #ececec;
+  // background-color: darkcyan;
 }
 .navigation {
   &--flex {
     display: flex;
+  }
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
   }
 }
 .header-logo {
@@ -12,11 +16,20 @@
   &--studio-color {
     color: var(--black-color);
   }
+  @media screen and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 .navpages {
   display: flex;
-  margin-left: 93px;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 .navpages__page {
   position: relative;
@@ -48,19 +61,65 @@
     }
   }
 }
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-btn__close {
+  display: none;
+  .menu-btn.is-open & {
+    display: block;
+  }
+}
+.menu-btn__selector {
+  .menu-btn.is-open & {
+    display: none;
+  }
+}
+
 .contacts {
-  display: flex;
-  margin-left: auto;
+  // margin-left: auto;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: 21px 0 21px 84px;
+  }
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      .contacts__page:first-child & {
+        width: 14px;
+        height: 10px;
+      }
+      .contacts__page:last-child & {
+        width: 10px;
+        height: 14px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
+
 .contacts__page {
   position: relative;
-  padding: 32px 0;
-  & + .contacts__page {
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    & + .contacts__page {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
     margin-left: 50px;
+    padding: 32px 0;
   }
 }
 .contacts__link {
@@ -69,6 +128,10 @@
   color: var(--secondary-text-color);
   font-weight: 500;
   letter-spacing: 0.02em;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
   &:hover,
   &:focus {
     color: var(--accent-color);
