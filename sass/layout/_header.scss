@@ -38,12 +38,12 @@
   }
 }
 .navpages {
-  display: flex;
   align-items: center;
 
-  @media screen and (max-width: 767px) {
-  }
+  // @media screen and (max-width: 767px) {
+  // }
   @media screen and (min-width: 768px) {
+    display: flex;
     margin-left: 88px;
   }
   @media screen and (min-width: 1200px) {
@@ -52,7 +52,12 @@
 }
 .navpages__page {
   position: relative;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
 
+    font-size: 40px;
+    // line-height: 1.17;
+  }
   @media screen and (min-width: 768px) {
     padding: 32px 0;
     & + .navpages__page {
@@ -68,18 +73,21 @@
   &:focus {
     color: var(--accent-color);
   }
-  &--current {
-    color: var(--accent-color);
-    &::after {
-      content: '';
-      position: absolute;
-      border-radius: 2px;
-      display: block;
-      width: 100%;
-      height: 4px;
-      bottom: -1px;
 
-      background-color: var(--accent-color);
+  @media screen and (min-width: 768px) {
+    &--current {
+      color: var(--accent-color);
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 2px;
+        display: block;
+        width: 100%;
+        height: 4px;
+        bottom: -1px;
+
+        background-color: var(--accent-color);
+      }
     }
   }
 }
@@ -108,12 +116,18 @@
 }
 
 .contacts {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin: 21px 0 21px 84px;
   }
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       .contacts__page:first-child & {
         width: 14px;
@@ -130,10 +144,8 @@
     margin-left: 275px;
   }
 }
-
 .contacts__page {
   position: relative;
-
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     & + .contacts__page {
       margin-top: 10px;
@@ -150,6 +162,12 @@
   color: var(--secondary-text-color);
   font-weight: 500;
   letter-spacing: 0.02em;
+  @media screen and (max-width: 767px) {
+    font-size: 34px;
+    .contacts__page:first-child & {
+      color: var(--accent-color);
+    }
+  }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 12px;
     line-height: 1.17;
@@ -157,5 +175,16 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+}
+.mobile-socials {
+  display: flex;
+}
+.mobile-socials__page {
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--accent-color);
+  & + & {
+    margin-left: 20px;
   }
 }
