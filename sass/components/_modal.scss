@@ -1,7 +1,5 @@
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -10,12 +8,21 @@
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
   border-radius: 4px;
   &__check-link {
     color: var(--accent-color);
     text-decoration: underline;
   }
 }
+
 .close-btn {
   @extend %icon;
   @extend %fill;
@@ -52,6 +59,9 @@
   font-weight: var(--weight-bold);
   font-size: 20px;
   line-height: 1.15;
+  @media screen and (max-width: 1199px) {
+    line-height: 1.5;
+  }
 }
 .modal__field {
   position: relative;
@@ -105,11 +115,16 @@
 }
 .modal__check {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
 
   color: var(--label-color);
   line-height: 1.71;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .modal__checkbox {
   /* -webkit-appearance: none;
@@ -126,7 +141,7 @@
 }
 .modal__check-icon {
   display: inline-block;
-  margin-right: 8.38px;
+  margin-right: 8px;
   width: 16px;
   height: 15px;
   border: 2px solid #000;

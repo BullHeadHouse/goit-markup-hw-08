@@ -1,18 +1,23 @@
 .container {
   // background-color: lavender;
+  display: block;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     width: 480px;
+    .header & {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   @media screen and (min-width: 768px) {
     width: 768px;
     &--flex {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      // justify-content: space-between;
     }
   }
   @media screen and (min-width: 1200px) {

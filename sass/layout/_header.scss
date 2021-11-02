@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
   // background-color: darkcyan;
 }
@@ -10,6 +11,21 @@
     justify-content: space-between;
   }
 }
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: palegoldenrod;
+    &.is-open {
+      padding: 48px 40px;
+      display: block;
+    }
+  }
+}
+
 .header-logo {
   @extend %logo;
   padding: 15px 0;
@@ -24,6 +40,9 @@
 .navpages {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+  }
   @media screen and (min-width: 768px) {
     margin-left: 88px;
   }
@@ -33,9 +52,12 @@
 }
 .navpages__page {
   position: relative;
-  padding: 32px 0;
-  & + .navpages__page {
-    margin-left: 50px;
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+    & + .navpages__page {
+      margin-left: 50px;
+    }
   }
 }
 .navpages__link {
@@ -86,7 +108,6 @@
 }
 
 .contacts {
-  // margin-left: auto;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin: 21px 0 21px 84px;
   }
@@ -106,6 +127,7 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
+    margin-left: 275px;
   }
 }
 
@@ -118,7 +140,7 @@
     }
   }
   @media screen and (min-width: 1200px) {
-    margin-left: 50px;
+    margin-left: 30px;
     padding: 32px 0;
   }
 }
