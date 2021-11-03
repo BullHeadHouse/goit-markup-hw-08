@@ -29,9 +29,10 @@ img {
 .close-btn,
 .modal__input,
 .modal__comment,
-.modal__btn {
+.modal__btn,
+.menu-btn {
   transition-property: color, background-color, box-shadow, transform, opacity,
-    border;
+    border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

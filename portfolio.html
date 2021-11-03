@@ -16,51 +16,95 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
 
-    <!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- HEADER-->
     <header class="header">
       <div class="container container--flex">
-        <nav class="navigation navigation--flex">
-          <a class="header-logo" href="./index.html"
-            >Web<span class="header-logo--studio-color">Studio</span></a
+        <a class="header-logo" href="./index.html"
+          >Web<span class="header-logo--studio-color">Studio</span></a
+        >
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          data-menu-open
+        >
+          <svg
+            class="menu-btn__selector"
+            width="40px"
+            height="40px"
+            aria-label="Відкриття мобільного меню"
           >
+            <use href="./images/icons/icons.svg#selector_40px"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <button
+            type="button"
+            class="menu-btn"
+            aria-expanded="false"
+            data-menu-close
+          >
+            <svg
+              class="menu-btn__close"
+              width="40px"
+              height="40px"
+              aria-label="Закриття мобільного меню"
+            >
+              <use href="./images/icons/icons.svg#close_40px"></use>
+            </svg>
+          </button>
+          <nav class="navigation navigation--flex">
+            <ul class="navpages">
+              <li class="navpages__page">
+                <a class="navpages__link" href="./index.html">Студия</a>
+              </li>
+              <li class="navpages__page">
+                <a
+                  class="navpages__link navpages__link--current"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navpages__page">
+                <a class="navpages__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
 
-          <ul class="navpages">
-            <li class="navpages__page">
-              <a class="navpages__link" href="./index.html">Студия</a>
-            </li>
-            <li class="navpages__page">
-              <a
-                class="navpages__link navpages__link--current"
-                href="./portfolio.html"
-                >Портфолио</a
+          <ul class="contacts">
+            <li class="contacts__page">
+              <a class="contacts__link" href="mailto:info@devstudio.com"
+                ><svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons/icons.svg#envelope"></use></svg
+                >info@devstudio.com</a
               >
             </li>
-            <li class="navpages__page">
-              <a class="navpages__link" href="">Контакты</a>
+            <li class="contacts__page">
+              <a class="contacts__link" href="tel:+380961111111"
+                ><svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons/icons.svg#smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-
-        <ul class="contacts">
-          <li class="contacts__page">
-            <a class="contacts__link" href="mailto:info@devstudio.com"
-              ><svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons/icons.svg#envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__page">
-            <a class="contacts__link" href="tel:+380961111111"
-              ><svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons/icons.svg#smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">Instagram</a>
+            </li>
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">Twitter</a>
+            </li>
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">Facebook</a>
+            </li>
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -777,5 +821,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

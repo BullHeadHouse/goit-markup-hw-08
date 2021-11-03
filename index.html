@@ -17,7 +17,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
@@ -28,11 +27,37 @@
         <a class="header-logo" href="./index.html"
           >Web<span class="header-logo--studio-color">Studio</span></a
         >
-        <div
-          class="menu-container container--flex"
-          id="menu-container"
-          data-menu
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          data-menu-open
         >
+          <svg
+            class="menu-btn__selector"
+            width="40px"
+            height="40px"
+            aria-label="Відкриття мобільного меню"
+          >
+            <use href="./images/icons/icons.svg#selector_40px"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <button
+            type="button"
+            class="menu-btn"
+            aria-expanded="false"
+            data-menu-close
+          >
+            <svg
+              class="menu-btn__close"
+              width="40px"
+              height="40px"
+              aria-label="Закриття мобільного меню"
+            >
+              <use href="./images/icons/icons.svg#close_40px"></use>
+            </svg>
+          </button>
           <nav class="navigation navigation--flex">
             <ul class="navpages">
               <li class="navpages__page">
@@ -68,34 +93,20 @@
             </li>
           </ul>
           <ul class="mobile-socials">
-            <li class="mobile-socials__page">Instagram</li>
-            <li class="mobile-socials__page">Twitter</li>
-            <li class="mobile-socials__page">Facebook</li>
-            <li class="mobile-socials__page">LinkedIn</li>
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">Instagram</a>
+            </li>
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">Twitter</a>
+            </li>
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">Facebook</a>
+            </li>
+            <li class="mobile-socials__page">
+              <a class="mobile-socials__link" href="">LinkedIn</a>
+            </li>
           </ul>
         </div>
-
-        <button
-          type="button"
-          class="menu-btn"
-          aria-expanded="false"
-          data-menu-button
-        >
-          <svg
-            width="40px"
-            height="40px"
-            aria-label="Переключення мобільного меню"
-          >
-            <use
-              class="menu-btn__close"
-              href="./images/icons/icons.svg#close_40px"
-            ></use>
-            <use
-              class="menu-btn__selector"
-              href="./images/icons/icons.svg#selector_40px"
-            ></use>
-          </svg>
-        </button>
       </div>
     </header>
 

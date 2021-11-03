@@ -102,11 +102,12 @@ img {
 .modal__input,
 .modal__comment,
 .modal__comment,
-.modal__btn {
-  -webkit-transition-property: color, background-color, opacity, border, -webkit-box-shadow, -webkit-transform;
-  transition-property: color, background-color, opacity, border, -webkit-box-shadow, -webkit-transform;
-  transition-property: color, background-color, box-shadow, transform, opacity, border;
-  transition-property: color, background-color, box-shadow, transform, opacity, border, -webkit-box-shadow, -webkit-transform;
+.modal__btn,
+.menu-btn {
+  -webkit-transition-property: color, background-color, opacity, border, fill, -webkit-box-shadow, -webkit-transform;
+  transition-property: color, background-color, opacity, border, fill, -webkit-box-shadow, -webkit-transform;
+  transition-property: color, background-color, box-shadow, transform, opacity, border, fill;
+  transition-property: color, background-color, box-shadow, transform, opacity, border, fill, -webkit-box-shadow, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -560,16 +561,34 @@ img {
 
 @media screen and (max-width: 767px) {
   .menu-container {
-    display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    background-color: palegoldenrod;
+    width: 100vw;
+    padding: 48px 40px;
+    height: 100vh;
+    z-index: 100;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 250ms linear;
+    transition: -webkit-transform 250ms linear;
+    transition: transform 250ms linear;
+    transition: transform 250ms linear, -webkit-transform 250ms linear;
+    background-color: hotpink;
+    background-color: var(--white-color);
   }
   .menu-container.is-open {
-    padding: 48px 40px;
     display: block;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -592,6 +611,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .navpages {
+    margin-bottom: 302px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -617,6 +642,7 @@ img {
   .navpages__page {
     margin-bottom: 32px;
     font-size: 40px;
+    line-height: 1.17;
   }
 }
 
@@ -668,6 +694,10 @@ img {
   background-color: transparent;
 }
 
+.menu-btn:hover, .menu-btn:focus {
+  fill: var(--accent-color);
+}
+
 @media screen and (min-width: 768px) {
   .menu-btn {
     display: none;
@@ -675,19 +705,20 @@ img {
 }
 
 .menu-btn__close {
-  display: none;
-}
-
-.menu-btn.is-open .menu-btn__close {
-  display: block;
-}
-
-.menu-btn.is-open .menu-btn__selector {
-  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 @media screen and (max-width: 767px) {
   .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     margin-bottom: 64px;
   }
 }
@@ -759,11 +790,15 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .contacts__link {
+  .contacts__page:last-child .contacts__link {
     font-size: 34px;
+    line-height: 1.17;
+    padding-bottom: 32px;
+    color: var(--accent-color);
   }
   .contacts__page:first-child .contacts__link {
-    color: var(--accent-color);
+    font-size: 24px;
+    line-height: 1.17;
   }
 }
 
@@ -784,14 +819,28 @@ img {
   display: flex;
 }
 
-.mobile-socials__page {
+@media screen and (min-width: 768px) {
+  .mobile-socials__page {
+    display: none;
+  }
+}
+
+.mobile-socials__page:not(:last-child)::after {
+  content: '';
+  width: 0px;
+  height: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.mobile-socials__link {
   font-size: 18px;
   line-height: 1.22;
   color: var(--accent-color);
-}
-
-.mobile-socials__page + .mobile-socials__page {
-  margin-left: 20px;
+  font-weight: 500;
 }
 
 .hero {
