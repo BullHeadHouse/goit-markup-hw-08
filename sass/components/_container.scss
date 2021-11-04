@@ -6,20 +6,20 @@
   padding-right: 15px;
 
   @media screen and (max-width: 767px) {
-    width: 480px;
+    max-width: 480px;
     .header & {
       display: flex;
       justify-content: space-between;
     }
   }
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 768px;
     &--flex {
       display: flex;
       flex-wrap: wrap;
     }
   }
   @media screen and (min-width: 1200px) {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
